@@ -1,0 +1,59 @@
+.TodoItem
+{
+  display:flex;
+  width: 95%;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 45px;
+  background-color: var(--background-field);
+  border-radius: var(--border-radius-field);
+  box-shadow: var(--box-shadow-item);
+}
+
+.TodoItem:first-child
+{
+  margin-top: 3%;
+}
+
+.TodoItem:last-child
+{
+  margin-bottom: 3%;
+}
+
+.ItemText
+{
+  width: 100%;
+  padding: 12px 4px;
+  font-family: var(--body-font);
+}
+
+.ItemText-complete
+{
+  text-decoration: line-through;
+}
+
+.check-icon-wrapper
+{
+  width: 30px;
+  color:var(--light-grey);
+}
+
+.check-icon-active
+{
+  color:var(--green);
+}
+
+.close-icon-wrapper
+{
+  width: 30px;
+  color:var(--light-grey);
+  margin-right: 4px;
+}
+
+.close-icon-wrapper:hover
+{
+  color: var(--red);
+  cursor: pointer;
+}

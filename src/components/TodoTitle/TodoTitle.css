@@ -1,0 +1,36 @@
+.titleField
+{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title
+{
+  height: 60%;
+  width: 30%;
+  text-align: center;
+  font-family: var(--title-font);
+  font-size: var(--title-font-size);
+}
+
+.titleFieldLeft
+{
+  display:flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: baseline;
+
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+.sunMoonIcon
+{
+  position: fixed;
+  right: 20px;
+  top: 25px;
+  width: 30px;
+}

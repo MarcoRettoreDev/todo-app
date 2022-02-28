@@ -1,0 +1,9 @@
+
+.TodoList-wrapper
+{
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(min-content, max-content);
+  row-gap: 5%;
+  overflow-y:scroll;
+}

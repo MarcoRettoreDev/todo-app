@@ -1,5 +1,63 @@
+:root
+{
+  /* Colors */
+  --background: #ffffff;
+  --background-field: #d8d8d8bd;
+  --red: #b81d1d;
+  --green: #1D9A57;
+  --black: #08080C;
+  --white: #ffffff;
+  --light-grey: lightslategray;
+  --transparent: transparent;
+
+  /* Fonts */
+  --title-font: 'Passion One', cursive;
+  --body-font: 'League Spartan', sans-serif;
+
+  /* Fonts sizes */
+
+  --tiny-font-size: 8px;
+  --small-font-size: 12px;
+  --normal-font-size: 16px;
+  --medium-font-size: 20px;
+  --big-font-size: 24px;
+  --title-font-size: 32px;
+
+  /* Paddigs */
+  --basic-padding: 4px 8px;
+
+  /* Spaces */
+  --field-basic-padding: 4px 8px;
+  --margin-space-sections: 2%;
+
+  /* Borders */
+  --border-radius-basic: 10px;
+  --border-radius-field: 5px;
+
+  /* SHADOWS */
+  --box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+              rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  --box-shadow-item: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  --box-shadow-button: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+*,
+*::after,
+*::before
+{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+html
+{
+  height: 100vh;
+}
+
 body {
-  margin: 0;
+  min-height: 100%;
+  background-color: var(--background);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,7 +65,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root
+{
+  min-height: 100vh;
+  width: 90%;
+  margin: 0px auto;
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 12% 5% 5% 58% 4%;
+  row-gap: 3%;
 }

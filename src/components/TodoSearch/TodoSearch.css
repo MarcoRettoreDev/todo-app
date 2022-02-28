@@ -1,0 +1,32 @@
+.searchContainer
+{
+  display:flex;
+  flex-direction: row;
+  border-radius: var(--border-radius-basic);
+  box-shadow: var(--box-shadow);
+}
+
+.searchField
+{
+  width: 100%;
+  text-align: center;
+  padding: var(--field-basic-padding);
+  border-style: none;
+  border-radius: var(--border-radius-basic);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+.searchField:hover
+{
+  border-color:red;
+}
+
+.icon
+{
+  min-width: 40px;
+  position:absolute;
+  padding-left: 8px;
+  padding-top: 8px;
+  color: var(--light-grey);
+}
