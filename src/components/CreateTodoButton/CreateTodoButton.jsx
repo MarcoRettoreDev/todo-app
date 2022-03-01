@@ -8,7 +8,6 @@ function CreateTodoButton(props)
     alert('Modal Show');
   }
 
-
   return (
     <div className="CreateTodoButton-wrapper">
       <button className='button clear-button'>
