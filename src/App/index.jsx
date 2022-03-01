@@ -1,44 +1,40 @@
-// import './App.css';
 import React from 'react';
 import { AppUI } from './AppUI';
-
-const defaultTodos = 
-[
-  { text: 'Task 1', completed: false },
-  { text: 'Task 2', completed: false },
-  { text: 'Task 3', completed: true },
-  { text: 'Task 4 that iwll helpo us to build a better app ♥', completed: false },
-  { text: 'Task 5 with a longer text than the task before', completed: true },
-  { text: 'Task 6 Another task that we use to correct manage the scroll on the list', completed: true },
-  { text: 'Task 7 On this we will check some issues with the list', completed: false },
-  { text: 'Task 8 I think this is going well, but lest try with another one', completed: false },
-];
+import { useLocalStorage } from './hooks/useLocalStorage'
 
 function App() {
-  // Estado de los todos
-  const [todos, setTodos] = React.useState(defaultTodos);
+  // Recibimos el custom hook 
+  const {
+    item: todos,
+    saveItem: saveTodos,
+    loading, 
+    error
+  } = useLocalStorage('TODOS_V1', []);
 
-  // Guardamos el estado en esta constante en forma de array:
+  // Guardamos el estado del valor de búsqueda en esta constante en forma de array:
   const [searchValue, setSearchValue] = React.useState('');
 
-  // Todos Variables . ! es negación pero !! es negación de negación (true)
+  // Todos Variables          ! es negación pero !! es negación de negación (true)
   const completedTodos = todos.filter(todo => !!todo.completed).length;
   const totalTodos = todos.length;
   const remainingTodos = totalTodos - completedTodos;
 
-  // Buscador de task
-  const filterTodos = todos.filter((task)=> task.text.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()));
+  // Constante que filtra los todos para el buscador
+  const filterTodos = todos.filter((task)=> 
+  {
+    const texto = task.text.toString().toLowerCase();
+    return texto.includes(searchValue.toString().toLowerCase())
+  });
 
-  // Función completar todos y eliminar
-
+  // Función completar todos
   const toggleCompleteTodos = (text) =>
   {
     // primero buscamos el índice de la task que vamos a marcar
-    const todoIndex = todos.findIndex(task=> task.text == text);
+    const todoIndex = todos.findIndex(task=> task.text === text);
     // hacemos una copia de las task actuales
     const newTodos = [...todos];
     // condicional para activar, o desactivar nuestras task
-    if(newTodos[todoIndex].completed == false)
+    if(newTodos[todoIndex].completed === false)
     {
       newTodos[todoIndex].completed = true;
     }
@@ -47,21 +43,24 @@ function App() {
       newTodos[todoIndex].completed = false;
     }
     // re render of our task
-    setTodos(newTodos);
+    saveTodos(newTodos);
   }
 
+  //Función eliminar todos (misma lógica que completarlos)
   const deleteTodos = (text) =>
   {
-    const todoIndex = todos.findIndex(task=> task.text == text);
+    const todoIndex = todos.findIndex(task=> task.text === text);
     const newTodos = [...todos];
     if(todoIndex > -1)
     {
       newTodos.splice(todoIndex, 1)
     }
-    setTodos(newTodos);
+    saveTodos(newTodos);
   }
   
   return <AppUI
+  error={error}
+  loading={loading}
   searchValue={searchValue}
   setSearchValue={setSearchValue}
 

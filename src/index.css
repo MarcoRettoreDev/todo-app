@@ -72,6 +72,6 @@ body {
   margin: 0px auto;
   display:grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 12% 5% 5% 58% 4%;
+  grid-template-rows: 12% 5% 5% 60% 2%;
   row-gap: 3%;
 }

@@ -14,12 +14,12 @@
 
 .TodoItem:first-child
 {
-  margin-top: 3%;
+  margin-top: 1%;
 }
 
 .TodoItem:last-child
 {
-  margin-bottom: 3%;
+  margin-bottom: 4%;
 }
 
 .ItemText
