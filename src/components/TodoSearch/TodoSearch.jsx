@@ -1,8 +1,10 @@
 import React from 'react';
+import { TodoContext } from '../TodoContext/TodoContext';
 import './TodoSearch.css';
 
-function TodoSearch({searchValue, setSearchValue})//Acá recibimos las props del componente padre (App)
+function TodoSearch()
 {
+  const {searchValue, setSearchValue} = React.useContext(TodoContext);
   // Función que lee nuestro valor
   const onSearchValueChange = (event) =>
   {
