@@ -7,30 +7,17 @@
   align-items: flex-start;
 }
 
-.button
-{
-  width: 60px;
-  height: 30px;
-  font-family: var(--body-font);
-  font-weight: bold;
-  box-shadow: var(--box-shadow-button);
-  font-size: var(--normal-font-size);
-  border: none;
-  border-radius: var(--border-radius-basic);
-  transition: all .01s;
-  text-align: center;
-  padding: auto;
-}
-
 .clear-button
 {
-  background-color: var(--red);
+  margin-top: .3em;
+  width: 1.8em;
+  color: var(--red);
 }
 
 .add-button
 {
-  font-size: var(--medium-font-size);
-  background-color: var(--green);
+  width: 2.5em;
+  color: var(--green);
 }
 
 .clear-button:hover,

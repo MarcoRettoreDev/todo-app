@@ -13,6 +13,8 @@ function TodoProvider(props)
     error
   } = useLocalStorage('TODOS_V1', []);
 
+  const [openModal, setOpenModal] = React.useState(false);
+
   // Guardamos el estado del valor de búsqueda en esta constante en forma de array:
   const [searchValue, setSearchValue] = React.useState('');
 
@@ -60,6 +62,29 @@ function TodoProvider(props)
     saveTodos(newTodos);
   }
 
+  // Función elimitar TODOS los TODOS
+  const deleteAllTodos = () =>
+  {
+    const newTodos = [...todos];
+    if(newTodos.length >= 1)
+    {
+      const newTodosLength = newTodos.length + 1;
+      newTodos.splice(0, newTodosLength);
+    }
+    saveTodos(newTodos);
+  }
+
+  // Función Añadir TODOS
+  const addTodo = (text) =>
+  {
+    const newTodos = [...todos];
+    newTodos.push({
+      completed: false,
+      text,
+    })
+    saveTodos(newTodos);
+  }
+
   return(
     <TodoContext.Provider value={{
       error,
@@ -68,10 +93,14 @@ function TodoProvider(props)
       setSearchValue,
       completedTodos,
       totalTodos,
+      addTodo,
       remainingTodos,
       toggleCompleteTodos,
       deleteTodos,
+      deleteAllTodos,
       filterTodos,
+      openModal,
+      setOpenModal,
     }}>
      {props.children} 
     </TodoContext.Provider>

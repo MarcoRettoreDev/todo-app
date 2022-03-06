@@ -1,4 +1,5 @@
 import React from "react";
+// Main components:
 import { TodoContext } from "../components/TodoContext/TodoContext";
 import { TodoTitle } from '../components/TodoTitle/TodoTitle'; 
 import { TodoSearch } from '../components/TodoSearch/TodoSearch';
@@ -6,6 +7,11 @@ import { TodoCounter } from '../components/TodoCounter/TodoCounter';
 import { TodoList } from '../components/TodoList/TodoList';
 import { TodoItem } from '../components/TodoItem/TodoItem';
 import { CreateTodoButton } from '../components/CreateTodoButton/CreateTodoButton';
+// Extras components:
+import { TodosEmpty } from "../components/TodosEmpty/TodosEmpty";
+import { TodosError } from "../components/TodosError/TodosError";
+import { TodosLoading } from "../components/TodosLoading/TodosLoading";
+import { Modal } from '../components/Modal/Modal';
 
 function AppUI()
 {
@@ -14,7 +20,9 @@ function AppUI()
     loading,
     filterTodos,
     deleteTodos,
-    toggleCompleteTodos 
+    toggleCompleteTodos,
+    openModal,
+    setOpenModal,
   } = React.useContext(TodoContext);
 
   return(
@@ -30,11 +38,12 @@ function AppUI()
           loading,
           filterTodos,
           deleteTodos,
-          toggleCompleteTodos }) => (
+          toggleCompleteTodos,
+          }) => (
         <TodoList>
-          {error && <p>An error ocurred</p>}
-          {loading && <p>Loading page</p>}
-          {(!loading && !filterTodos.length) && <p>Press the + button to create your first TODO!</p>}
+          {error && <TodosError/>}
+          {loading && <TodosLoading/>}
+          {(!loading && !filterTodos.length) && <TodosEmpty/>}
           {/*Aca vamos recorrer la variable filterTodos y enviamos a nuestros items
           el identificador (key) el texto(task.text) si está completado (task.completed)
           y las funciones en forma de arrow function (buena práctica) */}
@@ -50,8 +59,15 @@ function AppUI()
         )}
       </TodoContext.Consumer>
     
-      <CreateTodoButton/>
-    
+      <CreateTodoButton>
+        
+      </CreateTodoButton>
+
+      {!!openModal && (
+        <Modal>
+        
+        </Modal>
+      )}
     </React.Fragment>
   );
 }

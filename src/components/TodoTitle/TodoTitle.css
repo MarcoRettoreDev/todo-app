@@ -6,11 +6,19 @@
   align-items: center;
 }
 
+.title-wrapper
+{
+  display:flex;
+  width: 30%;
+  height: 100%;
+}
+
 .title
 {
-  height: 60%;
-  width: 30%;
+  display:flex;
+  align-items: flex-end;
   text-align: center;
+  width: 50px;
   font-family: var(--title-font);
   font-size: var(--title-font-size);
 }
@@ -21,7 +29,7 @@
   height: 100%;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: baseline;
+  align-items: flex-end;
 
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
@@ -29,8 +37,33 @@
 
 .sunMoonIcon
 {
-  position: fixed;
-  right: 20px;
-  top: 25px;
-  width: 30px;
+  width: 2em;
+  margin-bottom: 1em;
+}
+
+.date
+{
+  font-weight: bold;
+  font-family: var(--body-font);
+  font-size: 1em;
+  color: var(--light-grey);
+}
+
+.title-svg
+{
+  display:none;
+}
+
+@media screen and (min-width: 768px)
+{
+  .title
+  {
+    width: 50%;
+  }
+
+  .title-svg
+  {
+    display:block;
+    width: 3em;
+  }
 }

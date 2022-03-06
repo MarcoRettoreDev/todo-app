@@ -17,9 +17,9 @@
   font-size: var(--normal-font-size);
 }
 
-.searchField:hover
+.searchField:focus
 {
-  border-color:red;
+  outline: 2px solid var(--light-grey);
 }
 
 .icon
@@ -27,6 +27,6 @@
   min-width: 40px;
   position:absolute;
   padding-left: 8px;
-  padding-top: 8px;
+  padding-top: 12px;
   color: var(--light-grey);
 }

@@ -1,0 +1,11 @@
+.state-content
+{
+  display: grid;
+  place-items: center;
+  height: 50vh;
+}
+
+.svg-img
+{
+  width: 250px;
+}
