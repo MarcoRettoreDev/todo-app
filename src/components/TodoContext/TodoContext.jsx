@@ -13,6 +13,7 @@ function TodoProvider(props)
     error
   } = useLocalStorage('TODOS_V1', []);
 
+  // Estado del modal
   const [openModal, setOpenModal] = React.useState(false);
 
   // Guardamos el estado del valor de búsqueda en esta constante en forma de array:

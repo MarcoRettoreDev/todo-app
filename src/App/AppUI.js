@@ -1,5 +1,6 @@
 import React from "react";
 // Main components:
+import { DesktopView } from '../components/DesktopView/DesktopView';
 import { TodoContext } from "../components/TodoContext/TodoContext";
 import { TodoTitle } from '../components/TodoTitle/TodoTitle'; 
 import { TodoSearch } from '../components/TodoSearch/TodoSearch';
@@ -12,6 +13,7 @@ import { TodosEmpty } from "../components/TodosEmpty/TodosEmpty";
 import { TodosError } from "../components/TodosError/TodosError";
 import { TodosLoading } from "../components/TodosLoading/TodosLoading";
 import { Modal } from '../components/Modal/Modal';
+import { DarkMode } from '../components/DarkMode/DarkMode';
 
 function AppUI()
 {
@@ -24,10 +26,16 @@ function AppUI()
     openModal,
     setOpenModal,
   } = React.useContext(TodoContext);
+  
+  const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
 
   return(
     <React.Fragment>
-      <TodoTitle/>
+      {vw >= 1024 && <DesktopView/>}
+      <TodoTitle>
+        <DarkMode/>
+        </TodoTitle>
+
       <TodoSearch/>
     
       <TodoCounter/>

@@ -35,9 +35,8 @@
   font-size: var(--normal-font-size);
 }
 
-.sunMoonIcon
+.darkThemeToggle
 {
-  width: 2em;
   margin-bottom: 1em;
 }
 

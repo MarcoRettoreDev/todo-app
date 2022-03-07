@@ -12,12 +12,29 @@
   align-items: center;
 }
 
+@media screen and (min-width: 1024px)
+{
+  .modal-background
+  {
+    justify-content: flex-end;
+  }
+}
+
 .modal-wrapper
 {
   width: 60%;
   display:grid;
   place-items: center;
 }
+
+@media screen and (min-width: 1024px)
+{
+  .modal-wrapper
+  {
+    margin-right: 5%;
+  }
+}
+
 
 .textarea-add-task
 {
@@ -32,6 +49,7 @@
   margin: 1em;
   position: relative;
   display:block;
+  resize: none;
 }
 
 .textarea-add-task:focus

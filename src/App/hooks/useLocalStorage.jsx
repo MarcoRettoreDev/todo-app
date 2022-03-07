@@ -6,12 +6,15 @@ function useLocalStorage(itemName, initialValue) // Recibimos los 2 parámetros 
   // Constantes de estados de carga
   const [loading, setLoading] = React.useState(true);
 
-  // Creamos nuestro Custom Hook
-  const [item, setItem] = React.useState(initialValue);  
-
   // Estado de error
   const [error, setError] = React.useState(false);
 
+  // Creamos nuestro Custom Hook de todos
+  const [item, setItem] = React.useState(initialValue);
+
+  // Custom Hook del theme
+  const [theme, setTheme] = React.useState(initialValue);
+  
   React.useEffect(() =>
   {
     try
@@ -21,7 +24,7 @@ function useLocalStorage(itemName, initialValue) // Recibimos los 2 parámetros 
         // Recibimos la información del local storage: "TODOS_V1"
         const localStorageItem = localStorage.getItem(itemName); 
         // creamos una variable de los todos parseado (json) por defecto
-        let parsedItem; 
+        let parsedItem 
 
         // Si nuestro localstore esta vacio (por que recien entran a la app)
         if (!localStorageItem)
@@ -29,7 +32,7 @@ function useLocalStorage(itemName, initialValue) // Recibimos los 2 parámetros 
           // le enviamos un array vacio en forma de string
           localStorage.setItem(itemName, JSON.stringify(initialValue));
           // por defecto, parsed todo es un array vacio 
-          parsedItem = []; 
+          parsedItem = [];
         }
         else // Si nuestro local storage no está vacio, tomamos la variable por defecto (vacia)
         {     
@@ -61,11 +64,21 @@ function useLocalStorage(itemName, initialValue) // Recibimos los 2 parámetros 
     }
   }
 
+  // Función que guarda el tema en local storage
+  const saveTheme = (theme) =>
+  {
+    const stringifyTheme = theme.toString();
+    localStorage.setItem(itemName, stringifyTheme);
+  }
+
   return {
     item,
     saveItem,
     loading,
     error,
+    theme,
+    setTheme,
+    saveTheme
   }
 }
 

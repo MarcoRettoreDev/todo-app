@@ -20,7 +20,17 @@ function Modal({ children })
 
   const onSubmit = () =>
   {
-    addTodo(newTodoValue);
+    if(newTodoValue.length < 80)
+    {
+      if(newTodoValue.length >= 1)
+      {
+        addTodo(newTodoValue);
+      }
+    }
+    else
+    {
+      return onClickClose();
+    }
     onClickClose();
   }
 
@@ -33,15 +43,12 @@ function Modal({ children })
       onClickClose();
     }
   }
-  
+
   return ReactDOM.createPortal
   (
-    <div className="modal-background">
+    <div className="modal-background" id='modal-background' onClick={()=> setOpenModal(false)}>
       {children}
-        <form action='#' className='modal-wrapper' onKeyPress={enterKey}>
-          <div className=' modal-close' onClick={onClickClose}>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 24 24" width="100%" fill="currentColor"><path d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z"></path><path d="M11.414 10l2.829 2.828a1 1 0 0 1-1.415 1.415L10 11.414l-2.828 2.829a1 1 0 1 1-1.415-1.415L8.586 10 5.757 7.172a1 1 0 0 1 1.415-1.415L10 8.586l2.828-2.829a1 1 0 0 1 1.415 1.415L11.414 10z"></path></svg>
-          </div>
+        <form action='#' className='modal-wrapper' onKeyPress={enterKey} onClick={(event)=> event.stopPropagation()}>
           <textarea className='textarea-add-task' value={newTodoValue} onChange={onChange}type="text" placeholder='Add your task here'></textarea>
           <div className='buttons-wrapper'>
             <div className="add-button add-modal" onClick={onSubmit}>

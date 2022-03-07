@@ -1,0 +1,98 @@
+:root
+{
+  --font-color: #333;
+  --background-color: #eee;
+
+  /* Toggle sizes */
+  --height-toggle: 28px;
+  --height-slider: 24px;
+  --width-toggle: 44px;
+  --slider-toggle: 18px;
+}
+
+[data-theme='dark']
+{
+  --font-color: #eee;
+  --background-color: #333;
+}
+
+body
+{
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+
+/* Toggle */
+
+.toggle-theme-wrapper 
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.toggle-theme 
+{
+  position: relative;
+  display: inline-block;
+  height: var(--height-toggle);
+  width: var(--width-toggle);
+}
+
+.toggle-theme input 
+{
+  display: none;
+}
+
+.slider 
+{
+  background-color: #ccc;
+  position: absolute;
+  cursor: pointer;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: 0.2s;
+}
+
+.slider:before 
+{
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: var(--height-slider);
+  height: 80%;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: var(--slider-toggle);
+}
+
+input:checked + .slider:before 
+{
+  transform: translateX(var(--slider-toggle));
+}
+
+input:checked + .slider 
+{
+  background-color: cornflowerblue;
+}
+
+.slider.round 
+{
+  border-radius: 32px;
+}
+
+.slider.round:before
+{
+  border-radius: 50%;
+
+}
+
+/* SVG of toggle */
+.svg-title
+{
+  width: 30px;
+}

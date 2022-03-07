@@ -8,10 +8,11 @@
   --black: #08080C;
   --white: #ffffff;
   --light-grey: lightslategray;
+  --grey-background: rgba(136, 133, 133, 0.404);
   --transparent: transparent;
 
   /* Fonts */
-  --title-font: 'Passion One', cursive;
+  --title-font: 'League Gothic', sans-serif;
   --body-font: 'League Spartan', sans-serif;
 
   /* Fonts sizes */
@@ -78,9 +79,21 @@ html
 
 @media screen and (min-width: 1024px)
 {
+  .body
+  {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   #root
   {
-    width: 50%;
+    width: 35vw;
+  }
+  #desktop
+  {
+    height: 100vh;
+    width: 35vw;
+    margin: 0 auto;
   }
 }
 
@@ -91,3 +104,4 @@ html
     width: 35%;
   }
 }
+
