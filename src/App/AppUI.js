@@ -1,6 +1,5 @@
 import React from "react";
 // Main components:
-import { DesktopView } from '../components/DesktopView/DesktopView';
 import { TodoContext } from "../components/TodoContext/TodoContext";
 import { TodoTitle } from '../components/TodoTitle/TodoTitle'; 
 import { TodoSearch } from '../components/TodoSearch/TodoSearch';
@@ -31,7 +30,7 @@ function AppUI()
 
   return(
     <React.Fragment>
-      {vw >= 1024 && <DesktopView/>}
+      {/* {vw >= 1024 && <DesktopView/>} */}
       <TodoTitle>
         <DarkMode/>
         </TodoTitle>
@@ -67,15 +66,9 @@ function AppUI()
         )}
       </TodoContext.Consumer>
     
-      <CreateTodoButton>
+      <CreateTodoButton/>
         
-      </CreateTodoButton>
-
-      {!!openModal && (
-        <Modal>
-        
-        </Modal>
-      )}
+      {!!openModal && ( <Modal /> )}
     </React.Fragment>
   );
 }

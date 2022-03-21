@@ -1,6 +1,17 @@
 :root
 {
+  --background: #ffffff;
+  --background-field: #d8d8d8bd;
+  --red: #b81d1d;
+  --green: #1D9A57;
+  --black: #08080C;
+  --white: #ffffff;
+  --light-grey: lightslategray;
+  --grey-dark: rgba(16, 14, 36, 0.486);
+  --grey-dark-plus : rgba(14, 14, 14, 0.900);
+  --transparent: transparent;
   --font-color: #333;
+  --body-color: rgba(114, 114, 113, 0.884);
   --background-color: #eee;
 
   /* Toggle sizes */
@@ -13,23 +24,27 @@
 [data-theme='dark']
 {
   --font-color: #eee;
-  --background-color: #333;
+  --background-color:rgba(14, 14, 14, 0.76);
+  --background-field:rgba(75, 74, 74, 0.657);
+  --box-shadow: 0 none !important;
+  --box-shadow-item: 0 none !important;
 }
 
 body
 {
-  background-color: var(--background-color);
   color: var(--font-color);
+  background-color: var(--body-color);
 }
 
 /* Toggle */
 
-.toggle-theme-wrapper 
+.toggle-theme-wrapper
 {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 4px;
+  color: var(--font-color);
 }
 
 .toggle-theme 
@@ -88,7 +103,6 @@ input:checked + .slider
 .slider.round:before
 {
   border-radius: 50%;
-
 }
 
 /* SVG of toggle */

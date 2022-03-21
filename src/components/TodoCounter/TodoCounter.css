@@ -3,9 +3,13 @@
   display:flex;
   justify-content: space-between;
   align-items: center;
-  font-family: var(--body-font);
+  
+  border-color: var(--background-color);
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius-basic);
   padding: var(--basic-padding);
+  
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
 }
 

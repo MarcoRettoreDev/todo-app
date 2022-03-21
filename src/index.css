@@ -1,34 +1,23 @@
 :root
 {
-  /* Colors */
-  --background: #ffffff;
-  --background-field: #d8d8d8bd;
-  --red: #b81d1d;
-  --green: #1D9A57;
-  --black: #08080C;
-  --white: #ffffff;
-  --light-grey: lightslategray;
-  --grey-background: rgba(136, 133, 133, 0.404);
-  --transparent: transparent;
-
   /* Fonts */
-  --title-font: 'League Gothic', sans-serif;
+  --title-font: 'Squada One', cursive;
   --body-font: 'League Spartan', sans-serif;
 
   /* Fonts sizes */
 
-  --tiny-font-size: 8px;
-  --small-font-size: 12px;
-  --normal-font-size: 16px;
-  --medium-font-size: 20px;
-  --big-font-size: 24px;
-  --title-font-size: 32px;
+  --tiny-font-size: 1rem;
+  --small-font-size: 1.4rem;
+  --normal-font-size: 1.6rem;
+  --medium-font-size: 2rem;
+  --big-font-size: 2.4rem;
+  --title-font-size: 3.2rem;
 
   /* Paddigs */
-  --basic-padding: 4px 8px;
+  --basic-padding: .4em .8em; 
 
   /* Spaces */
-  --field-basic-padding: 4px 8px;
+  --field-basic-padding: .4em .8em;
   --margin-space-sections: 2%;
 
   /* Borders */
@@ -54,11 +43,10 @@
 html
 {
   height: 100vh;
+  font-size: 62.5%;
 }
 
 .body {
-  min-height: 100%;
-  background-color: var(--background);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -69,39 +57,39 @@ html
 #root
 {
   min-height: 100vh;
-  width: 90%;
-  margin: 0px auto;
+  max-width: 450px;
   display:grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 12% 5% 5% 60% 2%;
+  grid-template-rows: 12% 4% 5% 60% 5%;
   row-gap: 3%;
+
+  margin: 0 auto;
+  padding: 1em;
+
+  border-radius: 10px;
+  background-color: var(--background-color);
 }
 
-@media screen and (min-width: 1024px)
-{
-  .body
-  {
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  #root
-  {
-    width: 35vw;
-  }
-  #desktop
-  {
-    height: 100vh;
-    width: 35vw;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (min-width: 1366px)
+@media screen and (min-width: 768px)
 {
   #root
   {
-    width: 35%;
+    min-height: 95vh;
+    box-shadow: var(--box-shadow);
+    margin-top: 2vh;
+    padding: 1em 2em;
   }
 }
 
+.default-text
+{
+  width: 90%;
+  margin: 0 auto;
+
+  font-weight: bold;
+  font-family: var(--body-font);
+  font-size: var(--small-font-size);
+  color: var(--light-grey);
+  line-height: 1.2em;
+  text-align: center;
+}

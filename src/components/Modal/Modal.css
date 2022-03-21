@@ -12,14 +12,6 @@
   align-items: center;
 }
 
-@media screen and (min-width: 1024px)
-{
-  .modal-background
-  {
-    justify-content: flex-end;
-  }
-}
-
 .modal-wrapper
 {
   width: 60%;
@@ -27,14 +19,14 @@
   place-items: center;
 }
 
-@media screen and (min-width: 1024px)
+@media screen and (min-width: 768px)
 {
   .modal-wrapper
   {
-    margin-right: 5%;
+    width: 40%;
+    height: 20%;
   }
 }
-
 
 .textarea-add-task
 {

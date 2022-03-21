@@ -1,5 +1,5 @@
 import React from "react";
-import mySvg from '../../SVGs/todo-list-svgrepo-com.svg';
+import myImg from '../../images/logo-img.png';
 import './TodoTitle.css';
 
 function TodoTitle(props)
@@ -13,7 +13,8 @@ function TodoTitle(props)
   return (
     <div className='titleField'>
       <div className="title-wrapper">
-        <h1 className='title'>TODO <br></br>LIST</h1>
+        <img src={myImg} alt="Imagen logo todo" />
+        <h1 className='title'>TODO LIST</h1>
       </div>
       <div className='titleFieldLeft'>
         <div className="darkThemeToggle"> {props.children} </div>

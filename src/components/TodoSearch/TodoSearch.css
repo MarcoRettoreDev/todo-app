@@ -4,29 +4,48 @@
   flex-direction: row;
   border-radius: var(--border-radius-basic);
   box-shadow: var(--box-shadow);
+
+  position: relative;
 }
 
 .searchField
 {
   width: 100%;
-  text-align: center;
+  
   padding: var(--field-basic-padding);
   border-style: none;
   border-radius: var(--border-radius-basic);
+
+  text-align: center;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
 }
 
 .searchField:focus
 {
-  outline: 2px solid var(--light-grey);
+  outline: 2px solid rgba(255, 197, 8, 0.507);
 }
 
 .icon
 {
-  min-width: 40px;
   position:absolute;
-  padding-left: 8px;
-  padding-top: 12px;
+  top: 1.2rem;
+  left: 1rem;
   color: var(--light-grey);
+}
+
+@media screen and (min-width: 768px)
+{
+  .icon
+  {
+    top: 1rem;
+  }
+}
+
+@media screen and (min-height: 950px)
+{
+  .icon
+  {
+    top: 1.6rem;
+  }
 }

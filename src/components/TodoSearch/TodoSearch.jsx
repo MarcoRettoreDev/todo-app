@@ -15,7 +15,7 @@ function TodoSearch()
       <input className='searchField' placeholder='Search task'
 /*Al cambiar, lee el valor*/onChange={onSearchValueChange} /*Asignamos el valor nuevamente*/ value={searchValue}
       />
-      <i className='fa fa-search icon'></i>
+      <i className='fa fa-search fa-lg icon'></i>
     </div>
   );
 }

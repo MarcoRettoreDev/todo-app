@@ -8,14 +8,3 @@
   overflow-y:auto;
 }
 
-.default-text
-{
-  width: 90%;
-  margin: 0 auto;
-  font-weight: bold;
-  font-family: var(--body-font);
-  font-size: 1.2em;
-  color: var(--light-grey);
-  line-height: 1.2em;
-  text-align: center;
-}

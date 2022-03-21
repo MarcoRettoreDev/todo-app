@@ -1,20 +1,25 @@
 .TodoItem
 {
-  display:flex;
   width: 95%;
-  margin: 0 auto;
+  min-height: 2.5em;
+
+  display:flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  min-height: 45px;
-  background-color: var(--background-field);
+
+  margin: 0 auto;
   border-radius: var(--border-radius-field);
   box-shadow: var(--box-shadow-item);
+  background-color: var(--background-field);
+  
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
 }
 
 .TodoItem:first-child
 {
-  margin-top: 1%;
+  margin-top: 2%;
 }
 
 .TodoItem:last-child
@@ -25,8 +30,7 @@
 .ItemText
 {
   width: 100%;
-  padding: 12px 4px;
-  font-family: var(--body-font);
+  padding: 4px 8px;
 }
 
 .ItemText-complete
@@ -36,8 +40,15 @@
 
 .check-icon-wrapper
 {
-  width: 30px;
+  width: 3rem;
   color:var(--light-grey);
+  margin-left: .5em;
+}
+
+.check-icon-wrapper:hover
+{
+  cursor:pointer;
+  color: var(--green);
 }
 
 .check-icon-active
@@ -47,9 +58,9 @@
 
 .close-icon-wrapper
 {
-  width: 30px;
+  width: 3rem;
   color:var(--light-grey);
-  margin-right: 4px;
+  margin-right: .5em;
 }
 
 .close-icon-wrapper:hover
