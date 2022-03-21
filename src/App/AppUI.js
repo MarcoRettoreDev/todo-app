@@ -26,11 +26,8 @@ function AppUI()
     setOpenModal,
   } = React.useContext(TodoContext);
   
-  const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-
   return(
     <React.Fragment>
-      {/* {vw >= 1024 && <DesktopView/>} */}
       <TodoTitle>
         <DarkMode/>
         </TodoTitle>
