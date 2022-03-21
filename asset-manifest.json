@@ -1,20 +1,16 @@
 {
-  "files": {
-    "main.css": "/todo-app/static/css/main.befa92ce.css",
-    "main.js": "/todo-app/static/js/main.ec9d2b26.js",
-    "static/media/undraw_page_not_found_re_e9o6.svg": "/todo-app/static/media/undraw_page_not_found_re_e9o6.c60c28d7009e0916762281d9053b4ec9.svg",
-    "static/media/undraw_add_notes_re_ln36.svg": "/todo-app/static/media/undraw_add_notes_re_ln36.4818c2be4a33bbd53c306f5fb9762511.svg",
-    "static/media/undraw_project_completed_re_pqqq.svg": "/todo-app/static/media/undraw_project_completed_re_pqqq.88b71151105a22f5b1437ebc266acc51.svg",
-    "static/media/github-circle.svg": "/todo-app/static/media/github-circle.004326eb0b32a8c6cc914c81286f8ec7.svg",
-    "index.html": "/todo-app/index.html",
-    "static/media/todo-list-svgrepo-com.svg": "/todo-app/static/media/todo-list-svgrepo-com.03584f8243d6a6c568a0a3f79505b2f8.svg",
-    "static/media/sun-f.svg": "/todo-app/static/media/sun-f.ca14c61c5d597527fcce0bbe83ac29e2.svg",
-    "static/media/moon-f.svg": "/todo-app/static/media/moon-f.5ec1d05bccb64bf9f6b4c003a0207f3d.svg",
-    "main.befa92ce.css.map": "/todo-app/static/css/main.befa92ce.css.map",
-    "main.ec9d2b26.js.map": "/todo-app/static/js/main.ec9d2b26.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.befa92ce.css",
-    "static/js/main.ec9d2b26.js"
-  ]
+  "main.css": "/todo-app/static/css/main.b3195ec5.chunk.css",
+  "main.js": "/todo-app/static/js/main.32d077d5.chunk.js",
+  "main.js.map": "/todo-app/static/js/main.32d077d5.chunk.js.map",
+  "static/js/1.2e2c9723.chunk.js": "/todo-app/static/js/1.2e2c9723.chunk.js",
+  "static/js/1.2e2c9723.chunk.js.map": "/todo-app/static/js/1.2e2c9723.chunk.js.map",
+  "runtime~main.js": "/todo-app/static/js/runtime~main.84c007b1.js",
+  "runtime~main.js.map": "/todo-app/static/js/runtime~main.84c007b1.js.map",
+  "static/media/logo-img.png": "/todo-app/static/media/logo-img.5e6d8bbc.png",
+  "static/media/undraw_add_notes_re_ln36.svg": "/todo-app/static/media/undraw_add_notes_re_ln36.c710b0d2.svg",
+  "static/media/undraw_page_not_found_re_e9o6.svg": "/todo-app/static/media/undraw_page_not_found_re_e9o6.67f7594b.svg",
+  "static/css/main.b3195ec5.chunk.css.map": "/todo-app/static/css/main.b3195ec5.chunk.css.map",
+  "index.html": "/todo-app/index.html",
+  "precache-manifest.ab80cc2de88deb97d44fc07dee622777.js": "/todo-app/precache-manifest.ab80cc2de88deb97d44fc07dee622777.js",
+  "service-worker.js": "/todo-app/service-worker.js"
 }
